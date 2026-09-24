@@ -1,0 +1,63 @@
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #1a73e8;
+}
+
+.bio {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hobby-list {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hobby-list li:nth-child(1) {
+    color: #e53935; 
+}
+
+.hobby-list li:nth-child(2) {
+    color: #2e7d32; 
+}
+
+.hobby-list li:nth-child(3) {
+    color: #8e24aa; 
+}
+
+.btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 24px;
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1557b0;
+    transform: scale(1.05);
+}
