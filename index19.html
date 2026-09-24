@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô Hình Hộp CSS (CSS Box Model)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .box {
+            margin: 25px;
+            padding: 35px;
+            width: 200px;
+            background-color: lightseagreen;
+            border: 20px dashed indianred;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Khung hiển thị thông số tính toán */
+        .info-card {
+            margin-left: 25px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .info-card ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Minh Hoạ CSS Box Model</h2>
+
+    <div class="box">
+        Content demo box
+    </div>
+
+    <div class="info-card">
+        <h3>Tính toán kích thước chiếm dụng:</h3>
+        <ul>
+            <li><strong>Width (Nội dung):</strong> 200px</li>
+            <li><strong>Padding (Trái + Phải):</strong> 35px × 2 = 70px</li>
+            <li><strong>Border (Trái + Phải):</strong> 20px × 2 = 40px</li>
+            <li><strong>Margin (Trái + Phải):</strong> 25px × 2 = 50px</li>
+        </ul>
+        <hr>
+        <p><strong>Tổng chiều rộng chiếm dụng trên trang:</strong><br>
+        200 + 70 + 40 + 50 = <strong>360px</strong></p>
+    </div>
+
+</body>
+</html>
