@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khảo Sát Khách Hàng</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        label { font-weight: bold; display: block; margin-top: 12px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 5px; text-align: center; font-size: 14px; }
+        th, td { border: 1px solid #ddd; padding: 6px; }
+        input[type="submit"] { margin-top: 15px; padding: 8px 16px; background: #2071b5; color: #fff; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Khảo Sát Ý Kiến</h2>
+    <form action="#" method="POST">
+        <label>1. Độ tuổi:</label>
+        <select name="age">
+            <option>Dưới 18</option>
+            <option>18 - 35</option>
+            <option>Trên 35</option>
+        </select>
+
+        <label>2. Giới tính:</label>
+        <input type="radio" name="gender" value="Nam"> Nam
+        <input type="radio" name="gender" value="Nữ"> Nữ
+
+        <label>3. Đánh giá chất lượng:</label>
+        <table>
+            <tr><th>Tiêu chí</th><th>Rất tệ</th><th>Bình thường</th><th>Tốt</th></tr>
+            <tr><td>Sản phẩm</td><td><input type="radio" name="q" value="1"></td><td><input type="radio" name="q" value="2"></td><td><input type="radio" name="q" value="3"></td></tr>
+            <tr><td>Dịch vụ</td><td><input type="radio" name="s" value="1"></td><td><input type="radio" name="s" value="2"></td><td><input type="radio" name="s" value="3"></td></tr>
+        </table>
+
+        <label>4. Ý kiến khác:</label>
+        <textarea name="comment" rows="3" style="width: 100%; box-sizing: border-box;"></textarea>
+
+        <input type="submit" value="Gửi khảo sát">
+    </form>
+</body>
+</html>
