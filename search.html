@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Form Tìm kiếm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 400px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 250px;
+        }
+        input[type="submit"] {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Form tìm kiếm Google</h2>
+    <form action="https://www.google.com.vn/search" method="GET"> 
+        <input type="text" name="q" placeholder="Nhập từ khóa tìm kiếm..."/>
+        <input type="submit" value="Tìm bằng Google"/>
+    </form>
+
+    <h2>2. Form tìm kiếm Bing</h2>
+    <form action="https://www.bing.com/search" method="GET"> 
+        <input type="text" name="q" placeholder="Nhập từ khóa tìm kiếm..."/>
+        <input type="submit" value="Tìm bằng Bing"/>
+    </form>
+
+</body>
+</html>
