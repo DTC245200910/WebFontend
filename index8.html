@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Thông Tin</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .form-card h2 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e8eaed;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label.title-label {
+            display: block;
+            font-weight: 600;
+            color: #3c4043;
+            margin-bottom: 8px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #dadce0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+
+        .hobby-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .hobby-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #4a4a4a;
+            cursor: pointer;
+        }
+
+        .hobby-item input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 11px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Nút Submit (Xanh lá) */
+        .btn-submit {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+
+        /* Nút Reset (Đỏ) */
+        .btn-reset {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-reset:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>Thông Tin Cá Nhân</h2>
+        <form action="#" method="POST">
+
+            <div class="form-group">
+                <label class="title-label" for="yourname">Họ và tên:</label>
+                <input type="text" id="yourname" name="yourname" placeholder="Nhập họ và tên..." required>
+            </div>
+
+            <div class="form-group">
+                <label class="title-label" for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="nhap.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label class="title-label">Sở thích:</label>
+                <div class="hobby-options">
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby" value="doc_sach"> Đọc sách
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby" value="the_thao"> Thể thao
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby" value="du_lich"> Du lịch
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby" value="am_nhac"> Âm nhạc
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" class="btn btn-submit" value="Gửi thông tin">
+                <input type="reset" class="btn btn-reset" value="Nhập lại">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
