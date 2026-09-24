@@ -1,0 +1,40 @@
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #1a73e8;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.important-box {
+
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #2c3e50;
+
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+    color: #ffffff; 
+}
+
+.important-box h2,
+.important-box p {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+}
