@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Lists</title>
+    <style>
+
+        .square { list-style-type: square; }
+        .roman  { list-style-type: upper-roman; }
+
+        .img    { list-style-image: url('icon.png'); }
+
+        .inside { list-style-position: inside; }
+
+        .short  { list-style: circle inside; }
+
+        ol.color { color: red; }
+        ol.color span { color: black; }
+    </style>
+</head>
+<body>
+    <ul class="square"><li>Mục hình vuông</li></ul>
+    <ol class="roman"><li>Số La Mã</li></ol>
+    <ul class="img"><li>Dấu bằng ảnh</li></ul>
+    <ul class="inside"><li>Thụt lề inside</li></ul>
+    <ul class="short"><li>Thuộc tính rút gọn</li></ul>
+
+    <ol class="color">
+        <li><span>Đoạn văn bản mẫu</span></li>
+    </ol>
+</body>
+</html>
