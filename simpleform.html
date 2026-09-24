@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mẫu Đặt Hàng Đơn Giản</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="get" action="simpleform.html" class="wufoo">
+        <h2>Đơn Đặt Hàng</h2>
+
+        <p>Bạn muốn mua sản phẩm nào?</p>
+        <select name="product">
+            <option value="A">Sản phẩm A</option>
+            <option value="B">Sản phẩm B (+ 0.5$)</option>
+            <option value="C">Sản phẩm C (+ 0.5$)</option>
+        </select>
+
+        <p>Bạn muốn đặt số lượng bao nhiêu?</p>
+        <input type="radio" name="rd" value="1" /> 1 - $10 <br />
+        <input type="radio" name="rd" value="2" /> 2 - $20 <br />
+        <input type="radio" name="rd" value="3" /> 3 - $25 <br />
+
+        <p>Họ và tên <span style="color: red">*</span></p>
+        <input type="text" name="firstname" placeholder="Họ" size="15" />
+        <input type="text" name="lastname" placeholder="Tên" size="15" />
+
+        <p>Địa chỉ Email</p>
+        <input type="text" name="email" size="35" />
+
+        <p>Số điện thoại</p>
+        <input type="text" name="phone1" size="5" /> -
+        <input type="text" name="phone2" size="5" /> -
+        <input type="text" name="phone3" size="5" />
+
+        <p><input type="button" name="btSubmit" value="Gửi đơn hàng" /></p>
+    </form>
+
+</body>
+</html>
