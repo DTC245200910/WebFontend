@@ -1,0 +1,12 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; padding: 10px; background: #f4f4f4; }
+
+/* Header, Nav, Footer */
+header, nav, footer { background: #2c3e50; color: #fff; text-align: center; padding: 15px; margin-bottom: 10px; }
+nav a { color: #fff; text-decoration: none; margin: 0 10px; font-weight: bold; }
+
+/* Bố cục 3 cột Flexbox */
+.layout { display: flex; gap: 10px; }
+aside { flex: 1; background: #e8f4f8; padding: 15px; }
+main { flex: 2; background: #fff; padding: 15px; border: 1px solid #ddd; }
+article { background: #f9f9f9; padding: 10px; margin-top: 10px; border: 1px solid #eee; }
