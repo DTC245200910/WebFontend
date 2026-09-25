@@ -1,0 +1,57 @@
+/* Reset cơ bản và tính toán kích thước hộp */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding-top: 20px;
+}
+
+/* Định dạng thanh điều hướng nav */
+nav {
+    margin-top: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Định dạng phần thân và các cột inline-block */
+section {
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.box {
+    display: inline-block;
+    width: 28%; /* Dùng 28% để chừa khoảng trống cho margin và khoảng trắng inline-block */
+    padding: 20px;
+    background-color: lightblue;
+    margin: 10px;
+    vertical-align: top; /* Căn lề các cột bằng nhau ở mép trên */
+    border-radius: 5px;
+}
+
+/* Định dạng footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333333;
+    color: #ffffff;
+}
