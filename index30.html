@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Float và Overflow</title>
+    <link rel="stylesheet" href="style14.css">
+</head>
+<body>
+
+    <h1>Bố cục trang với float và overflow</h1>
+
+    <div class="container">
+        <div class="left-column">
+            <h3>Nội dung bên trái</h3>
+            <p>Cột này chiếm 50% chiều rộng và sử dụng <code>float: left</code> để đẩy về bên trái.</p>
+        </div>
+        <div class="right-column">
+            <h3>Nội dung bên phải</h3>
+            <p>Cột này chiếm 48% chiều rộng và sử dụng <code>float: right</code> để đẩy về bên phải.</p>
+        </div>
+    </div>
+
+    <div class="overflow-box">
+        Đây là một đoạn văn bản rất dài để chúng ta kiểm tra thuộc tính <code>overflow: auto</code>. Khi nội dung vượt quá kích thước cố định (chiều cao 100px và chiều rộng 300px), thanh cuộn sẽ tự động xuất hiện giúp người dùng đọc tiếp nội dung mà không làm đè hay vỡ bố cục các phần tử khác trên trang web.
+    </div>
+
+</body>
+</html>
