@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành CSS Grid - grid-column-start</title>
+    <link rel="stylesheet" href="style20.css">
+</head>
+<body>
+
+    <h2>Thực Hành Thuộc Tính grid-column-start</h2>
+
+    <h3>1. Sử dụng Column Line (Bắt đầu tại đường chỉ định)</h3>
+    <div class="grid-container">
+        <div class="item item-line">Item 1 (Bắt đầu từ cột line 3)</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h3>2. Sử dụng Span n (Mở rộng từ vị trí hiện tại)</h3>
+    <div class="grid-container">
+        <div class="item">Item 1</div>
+        <div class="item item-span">Item 2 (span 2 cột)</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h3>3. Sử dụng Auto (Mặc định theo luồng)</h3>
+    <div class="grid-container">
+        <div class="item item-auto">Item 1 (auto)</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+
+</body>
+</html>
