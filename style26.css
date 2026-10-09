@@ -1,0 +1,37 @@
+/* Tối ưu cuộn mượt (Smooth Scroll) */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Tùy chỉnh Hero Section */
+.intro-section {
+    height: 100vh;
+    min-height: 500px;
+    background: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+/* Đường gạch phân cách đẹp mắt */
+.divider {
+    height: 4px;
+    width: 60px;
+    background-color: #2196f3;
+    border-radius: 2px;
+}
+
+/* Hiệu ứng hover cho thẻ Card Material */
+.hoverable {
+    transition: all 0.3s ease;
+}
+.hoverable:hover {
+    transform: translateY(-5px);
+}
