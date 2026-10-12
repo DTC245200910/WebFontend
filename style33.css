@@ -1,0 +1,61 @@
+/* Reset CSS mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container tổng sắp xếp các phần tử chính theo chiều dọc */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo giao diện bao phủ toàn bộ chiều cao màn hình */
+}
+
+/* Header & Footer */
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Khung chứa nội dung chính và sidebar (Flexbox ngang trên Desktop) */
+.main-container {
+    display: flex;
+    flex: 1; /* Tự động co giãn chiếm phần không gian trống ở giữa */
+}
+
+/* Main Content chiếm 3 phần */
+.content {
+    flex: 3;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Sidebar chiếm 1 phần */
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Responsive cho màn hình thiết bị di động (<= 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Chuyển Content và Sidebar thành hàng dọc */
+    }
+}
