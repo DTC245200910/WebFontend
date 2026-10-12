@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Giới Thiệu Sản Phẩm</title>
+    <!-- Bootstrap 5.3 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">ProductX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Tính năng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cta">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Banner / Hero Section (Xây dựng chuẩn Bootstrap 5 không dùng Jumbotron) -->
+    <header id="hero" class="bg-dark text-white py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold mb-3">Giải Pháp Số Hóa Doanh Nghiệp Toàn Diện</h1>
+                    <p class="lead text-secondary mb-4">
+                        Nâng cao hiệu suất làm việc, tối ưu hóa quy trình và tăng trưởng doanh thu vượt bậc cùng ProductX.
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#cta" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Dùng Thử Miễn Phí</a>
+                        <a href="#about" class="btn btn-outline-light btn-lg px-4">Tìm Hiểu Thêm</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://picsum.photos/600/400?random=1" alt="Hero Banner" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Giới thiệu (Row gồm Hình ảnh + Nội dung mô tả) -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="https://picsum.photos/600/400?random=2" alt="Giới thiệu sản phẩm" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3 text-primary">Về Sản Phẩm Của Chúng Tôi</h2>
+                    <p class="fs-5 text-muted">
+                        ProductX được thiết kế với giao diện thân thiện, tính năng tự động hóa vượt trội và khả năng bảo mật cấp doanh nghiệp.
+                    </p>
+                    <p class="text-secondary">
+                        Chúng tôi giúp các nhóm làm việc kết nối dữ liệu nhanh chóng, theo dõi tiến độ dự án theo thời gian thực và đưa ra các quyết định chính xác dựa trên báo cáo phân tích thông minh.
+                    </p>
+                    <a href="#features" class="btn btn-outline-primary mt-2">Xem các tính năng nổi bật &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Danh sách tính năng (Row gồm 4 cột: Icon + Tiêu đề + Mô tả) -->
+    <section id="features" class="bg-light py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Tính Năng Nổi Bật</h2>
+                <p class="text-muted">Mọi công cụ bạn cần để quản lý công việc hiệu quả</p>
+            </div>
+            <div class="row g-4">
+                <!-- Tính năng 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="bi bi-speedometer2 display-5"></i>
+                            </div>
+                            <h3 class="h5 card-title fw-bold">Tốc Độ Cao</h3>
+                            <p class="card-text text-muted">Xử lý dữ liệu tức thì với hệ thống hạ tầng điện toán đám mây tiên tiến.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tính năng 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="bi bi-shield-lock display-5"></i>
+                            </div>
+                            <h3 class="h5 card-title fw-bold">Bảo Mật Tuyệt Đối</h3>
+                            <p class="card-text text-muted">Mã hóa dữ liệu 256-bit chuẩn ngân hàng bảo vệ an toàn thông tin cá nhân.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tính năng 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="bi bi-graph-up-arrow display-5"></i>
+                            </div>
+                            <h3 class="h5 card-title fw-bold">Báo Cáo Trực Quan</h3>
+                            <p class="card-text text-muted">Tự động tổng hợp biểu đồ phân tích và xuất dữ liệu chỉ với một cú nhấp.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tính năng 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="bi bi-headset display-5"></i>
+                            </div>
+                            <h3 class="h5 card-title fw-bold">Hỗ Trợ 24/7</h3>
+                            <p class="card-text text-muted">Đội ngũ kỹ thuật sẵn sàng giải đáp thắc mắc và hỗ trợ bạn mọi lúc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Nút Kêu Gọi Hành Động (CTA Section) -->
+    <section id="cta" class="bg-primary text-white text-center py-5">
+        <div class="container py-4">
+            <h2 class="display-5 fw-bold mb-3">Sẵn Sàng Bắt Đầu Trải Nghiệm?</h2>
+            <p class="lead mb-4">Đăng ký ngay hôm nay để nhận 14 ngày dùng thử miễn phí tất cả tính năng cao cấp.</p>
+            <a href="#" class="btn btn-light btn-lg px-5 py-3 fw-bold text-primary shadow">Đăng Ký Ngay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0 text-secondary">&copy; 2026 ProductX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
