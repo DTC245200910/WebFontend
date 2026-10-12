@@ -1,0 +1,41 @@
+/* Reset CSS cơ bản và áp dụng box-sizing cho tất cả phần tử */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Khung chứa toàn bộ bố cục */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cột bên trái: Nội dung chính */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+/* Cột bên phải: Sidebar */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+/* Kỹ thuật Clearfix: Xử lý co giãn chiều cao của container khi các con dùng float */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
