@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container chứa 5 Flex Items */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    height: 120px;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Định dạng cơ bản cho tất cả Flex Items */
+.item {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    
+    /* Đặt flex-grow mặc định cho các phần tử là 1 */
+    flex-grow: 1;
+}
+
+/* Áp dụng flex-grow lớn hơn cho Div thứ 2 */
+.item2 {
+    background-color: #ff9800; /* Đổi màu cam để nổi bật */
+    flex-grow: 3; /* Div thứ 2 sẽ chiếm khoảng trống gấp 3 lần các div khác */
+}
