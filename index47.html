@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Phim Hoạt Hình Cho Trẻ Em</title>
+    <style>
+        /* ==========================================
+           1. THIẾT LẬP CHUNG & RESET CSS
+           ========================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px; /* Bù khoảng trống cho Header cố định */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ==========================================
+           2. HEADER CỐ ĐỊNH & HEAD-LINK (Mức Trung bình)
+           ========================================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #ff6f61;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .head-link ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        /* Loại bỏ gạch chân và hiệu ứng rê chuột (Hover) */
+        .head-link a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .head-link a:hover {
+            font-weight: bold;
+            color: #ffe600;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* ==========================================
+           3. PHẦN NỘI DUNG CHÍNH (CONTENT)
+           ========================================== */
+        .container {
+            display: flex;
+            flex: 1;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Left Content - Danh sách video */
+        .left-content {
+            width: 320px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+
+        .left-content h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ff6f61;
+            border-bottom: 2px solid #ff6f61;
+            padding-bottom: 5px;
+        }
+
+        .video-menu {
+            list-style: none;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .video-item:hover {
+            background-color: #fff0ef;
+        }
+
+        .video-item img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .video-info h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .video-item:hover .video-info h4 {
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        .video-info p {
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Right Content - Khu vực phát video */
+        .right-content {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .video-player-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Tỉ lệ khung hình 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #000;
+            margin-bottom: 15px;
+        }
+
+        .video-player-wrapper iframe,
+        .video-player-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .main-video-details h2 {
+            font-size: 22px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .main-video-details p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* ==========================================
+           4. FOOTER
+           ========================================== */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        /* ==========================================
+           5. RESPONSIVE DESIGN (Mức Nâng cao)
+           ========================================== */
+        /* Tablet & Màn hình nhỏ (dưới 900px) */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column-reverse; /* Đưa khung xem video lên trên, danh sách xuống dưới */
+            }
+
+            .left-content {
+                width: 100%;
+            }
+
+            .video-menu {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 10px;
+            }
+        }
+
+        /* Điện thoại di động (dưới 600px) */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 15px;
+            }
+
+            body {
+                padding-top: 110px; /* Điều chỉnh lại offset khi header tăng chiều cao */
+            }
+
+            .head-link ul {
+                gap: 10px;
+                margin-top: 5px;
+            }
+
+            .head-link a {
+                font-size: 14px;
+                padding: 3px 6px;
+            }
+
+            .video-menu {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header & Head-link -->
+    <div class="header">
+        <div class="logo">
+            <h1>🎈 PhimHoatHinh.vn</h1>
+        </div>
+        <div class="head-link">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#hot">Mới cập nhật</a></li>
+                <li><a href="#popular">Xem nhiều nhất</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 2. Content -->
+    <div class="container">
+        <!-- Left Content: Menu danh sách phim -->
+        <div class="left-content">
+            <h3>Danh Sách Phim Chọn Lọc</h3>
+            <ul class="video-menu">
+                <li class="video-item" onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Tom & Jerry - Tập 1 (Thuyết Minh HD)')">
+                    <img src="https://picsum.photos/100/60?random=1" alt="Tom & Jerry">
+                    <div class="video-info">
+                        <h4>Tom & Jerry - Tập 1</h4>
+                        <p>Thuyết Minh | 1080p</p>
+                    </div>
+                </li>
+                <li class="video-item" onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Doraemon - Cuộc Phiêu Lưu Mới (HD)')">
+                    <img src="https://picsum.photos/100/60?random=2" alt="Doraemon">
+                    <div class="video-info">
+                        <h4>Doraemon - Tập 2</h4>
+                        <p>Thuyết Minh | 720p</p>
+                    </div>
+                </li>
+                <li class="video-item" onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Chú Cừu Shaun - Những Trò Đùa Vui Nhộn')">
+                    <img src="https://picsum.photos/100/60?random=3" alt="Shaun the Sheep">
+                    <div class="video-info">
+                        <h4>Chú Cừu Shaun</h4>
+                        <p>Lồng Tiếng | 1080p</p>
+                    </div>
+                </li>
+                <li class="video-item" onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Oggy và Những Chú Gián Tinh Tinh')">
+                    <img src="https://picsum.photos/100/60?random=4" alt="Oggy">
+                    <div class="video-info">
+                        <h4>Oggy & Chú Gián</h4>
+                        <p>Thuyết Minh | 720p</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Content: Khu vực phát video -->
+        <div class="right-content">
+            <div class="video-player-wrapper">
+                <!-- Nhúng video YouTube mẫu qua <iframe> hoặc dùng thẻ <video> -->
+                <iframe id="main-player" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+            <div class="main-video-details">
+                <h2 id="video-title">Tom & Jerry - Tập 1 (Thuyết Minh HD)</h2>
+                <p id="video-desc">Nội dung an toàn, không quảng cáo, dành riêng cho trẻ em. Chất lượng Full HD 1080p thuyết minh tiếng Việt chuẩn.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Footer -->
+    <div class="footer">
+        <p>&copy; 2026 PhimHoatHinh.vn - Trang web xem phim hoạt hình chọn lọc và an toàn cho trẻ em.</p>
+    </div>
+
+    <!-- Script đổi video khi click danh sách bên trái -->
+    <script>
+        function playVideo(url, title) {
+            document.getElementById('main-player').src = url;
+            document.getElementById('video-title').innerText = title;
+        }
+    </script>
+
+</body>
+</html>
