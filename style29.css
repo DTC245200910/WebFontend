@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    /* Thay đổi giá trị flex-wrap tại đây để thử nghiệm: nowrap | wrap | wrap-reverse | initial */
+    flex-wrap: wrap; 
+    width: 600px;
+    height: 300px;
+    gap: 10px;
+    border: 2px solid black;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.item {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
