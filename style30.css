@@ -1,0 +1,118 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.item {
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   VÍ DỤ 1: flex-basis với px
+   ========================================== */
+.ex1-container {
+    display: flex;
+    gap: 10px;
+}
+
+.ex1-item1 {
+    flex-basis: 200px;
+    background-color: lightblue;
+}
+
+.ex1-item2 {
+    flex-basis: 100px;
+    background-color: lightblue;
+}
+
+.ex1-item3 {
+    flex-basis: 150px;
+    background-color: lightblue;
+}
+
+/* ==========================================
+   VÍ DỤ 2: flex-basis với column
+   ========================================== */
+.ex2-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 400px;
+    border: 1px dashed #ccc;
+}
+
+.ex2-item {
+    flex-basis: 100px;
+    background-color: lightgreen;
+}
+
+/* ==========================================
+   VÍ DỤ 3: flex-basis với %
+   ========================================== */
+.ex3-container {
+    display: flex;
+    gap: 10px;
+}
+
+.ex3-item {
+    flex-basis: 50%;
+    background-color: lightcoral;
+}
+
+/* ==========================================
+   VÍ DỤ 4: flex-basis + flex-grow
+   ========================================== */
+.ex4-container {
+    display: flex;
+    width: 600px;
+    gap: 10px;
+    border: 1px solid #000;
+}
+
+.ex4-item1 {
+    flex-basis: 100px;
+    flex-grow: 1;
+    background-color: lightblue;
+}
+
+.ex4-item2 {
+    flex-basis: 100px;
+    flex-grow: 2;
+    background-color: lightblue;
+}
+
+.ex4-item3 {
+    flex-basis: 100px;
+    flex-grow: 1;
+    background-color: lightblue;
+}
